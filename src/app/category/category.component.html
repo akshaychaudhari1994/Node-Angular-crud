@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Category List</h2>
+  <button class="btn btn-sm btn-primary m-2" (click)="openCatForm()">Add +</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Parent Category</th>
+        <th>Actions</th> <!-- New column for actions -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{ category.id }}</td>
+        <td>{{ category.name }}</td>
+        <td>{{ category?.parentCategory?.name }}</td>
+        <td>
+          <button class="btn btn-sm btn-primary m-2" (click)="openEditModal(category.id)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteCategory(category.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

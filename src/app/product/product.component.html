@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>Product List</h2>
+  <button class="btn btn-sm btn-primary m-2" (click)="openCatForm()">Add +</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Categories</th>
+        <th>Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ getCategoryNames(product.id)}}</td>
+        <td>
+          <button class="btn btn-sm btn-primary m-2" (click)="openEditModal(product.id)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteCategory(product.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
