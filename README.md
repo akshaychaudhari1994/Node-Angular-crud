@@ -20,7 +20,7 @@ This is a sample project that demonstrates the integration of Angular frontend w
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/akshaychaudhari1994/trootech_code.git
+git clone https://github.com/akshaychaudhari1994/Node-Angular-crud.git
 ## Install dependencies for the frontend:
 cd clientApp/ecom
 npm install --legacy-peer-deps 
